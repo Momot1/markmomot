@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useState } from "react"
 
 function Login({user ,setUser}){
+    const history = useHistory()
+
+    if(user){
+        history.push("/")
+    }
+
     const [formData, setFormData] = useState({
         username: "",
         password: ""
@@ -19,7 +25,10 @@ function Login({user ,setUser}){
         })
         .then(resp => {
             if(resp.ok){
-                resp.json().then(setUser)
+                resp.json().then(user => {
+                    setUser(user)
+                    window.history.go(-1)
+                })
             }
         })
     }

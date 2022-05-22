@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useState } from "react"
 
-function Signup({setUser}){
+function Signup({user ,setUser}){
+
+    const history = useHistory()
+
+    if(user){
+        history.push("/")
+    }
+
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -22,7 +29,10 @@ function Signup({setUser}){
             body: JSON.stringify(formData)
         })
         .then(resp => resp.json())
-        .then(setUser)
+        .then(user => {
+            setUser(user)
+            window.history.go(-2)
+        })
     }
 
     function updateForm(e, input){

@@ -30,7 +30,7 @@ function App() {
         <Route path="/about"><About /></Route>
         <Route path="/login"><Login user={user} setUser={setUser}/></Route>
         <Route path="/contact"><Contact /></Route>
-        <Route path="/signup"><Signup setUser={setUser}/></Route>
+        <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>
         <Route path="/logout"><Logout setUser={setUser}/></Route>
         <Route path="/"><h1>404 NOT FOUND</h1></Route>
       </Switch>
