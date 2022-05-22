@@ -40,6 +40,7 @@ function Login({user ,setUser}){
             </form>
         </div>
     )
+
 }
 
 export default Login
