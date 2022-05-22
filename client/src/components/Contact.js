@@ -1,7 +1,7 @@
 function Contact(){
     return (
         <div>
-            <form action="https://formsubmit.co/255eb7a90da92a9c7a853d9363b8dcb4" method="POST">
+            <form action="https://formsubmit.co/markmomot03@gmail.com" method="POST">
                 {/* Honey */}
                 <input type="text" name="_honey" style={{display:'none'}}/>
 
