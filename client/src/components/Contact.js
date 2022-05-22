@@ -1,26 +1,8 @@
-import { useHistory } from "react-router-dom"
-
 function Contact(){
-    const history = useHistory()
-
-    function onFormSubmit(e){
-        history.push("/")
-    }
-
-
     return (
         <div>
-            <form action="https://formsubmit.co/markmomot03@gmail.com" method="POST" onSubmit={onFormSubmit}>
-                {/* Honey */}
-                <input type="text" name="_honey" style={{display:'none'}}/>
-
-                {/* Remove captcha */}
-                <input type="hidden" name="_captcha" value="false"/>
-
-                {/* Next form action */}
-                <input type="hidden" name="_next" value="https://markmomot.com/contact"/>
-                
-                {/* Form fill out */}
+            <h1>Please do not fill out form. Currently does not work</h1>
+            <form>
                 <label>Name: </label> 
                 <input type="text" name="Name" placeholder="Your Name" required/><br/>
                 <label>Email: </label>
@@ -29,7 +11,7 @@ function Contact(){
                 <input type="tel" name="Phone" placeholder="Phone Number"/><br/>
                 <label>Message: </label>
                 <input type="text" name="Message" placeholder="Message" required/><br/>
-                <input type="Submit" value="Send"/>
+                <button type="submit" disabled="disabled">Send</button>
             </form>
         </div>
     )
