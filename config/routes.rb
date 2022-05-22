@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   
   resources :projects
+  post "/sendmessage", to: "contact_form#create"
 end
