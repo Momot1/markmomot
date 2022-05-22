@@ -7,7 +7,7 @@ function Contact(){
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({name: "mark", message: "yooooooo", email: "johndoe@gmail.com"}) 
+            body: JSON.stringify({}) 
         })
         .then(resp => resp.json())
         .then(console.log)
@@ -25,8 +25,8 @@ function Contact(){
                 <label>Phone: </label>
                 <input type="tel" name="Phone" placeholder="Phone Number"/><br/>
                 <label>Message: </label>
-                <input type="text" name="Message" placeholder="Message" required/><br/>
-                <button type="submit">Send</button>
+                <input type="text" name="Message" placeholder="Message" disabled="disabled" required/><br/>
+                <button type="submit" disabled="diabled">Send</button>
             </form>
         </div>
     )
