@@ -1,6 +1,10 @@
+import { useHistory } from "react-router-dom"
+
 function Contact(){
+    const history = useHistory()
+
     function onFormSubmit(e){
-        e.preventDefault()
+        history.push("/")
     }
 
 
