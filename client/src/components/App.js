@@ -7,6 +7,7 @@ import Login from "./Login";
 import Contact from "./Contact";
 import Signup from "./Signup";
 import {  useState, useEffect } from "react";
+import Logout from "./Logout";
 
 function App() {
   const [user, setUser] = useState(null)
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar user={user}/>
 
       <Switch>
         <Route exact path="/"><Home /></Route>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/login"><Login user={user} setUser={setUser}/></Route>
         <Route path="/contact"><Contact /></Route>
         <Route path="/signup"><Signup setUser={setUser}/></Route>
+        <Route path="/logout"><Logout setUser={setUser}/></Route>
         <Route path="/"><h1>404 NOT FOUND</h1></Route>
       </Switch>
     </BrowserRouter>
