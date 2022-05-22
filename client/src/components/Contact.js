@@ -1,7 +1,12 @@
 function Contact(){
+    function onFormSubmit(e){
+        e.preventDefault()
+    }
+
+
     return (
         <div>
-            <form action="https://formsubmit.co/markmomot03@gmail.com" method="POST">
+            <form action="https://formsubmit.co/markmomot03@gmail.com" method="POST" onSubmit={onFormSubmit}>
                 {/* Honey */}
                 <input type="text" name="_honey" style={{display:'none'}}/>
 
