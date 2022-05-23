@@ -16,11 +16,6 @@ nav{
     margin-top: 4px;
 }
 
-.test{
-    align-items: flex-start;
-    justify-content: end;
-}
-
 @media (max-width: 700px){
     #desktop-nav{
         display: none;
