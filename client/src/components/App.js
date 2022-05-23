@@ -14,12 +14,15 @@ function App() {
 
   useEffect(() => {
     fetch("/me")
-    .then(resp => resp.json())
-    .then(setUser)
+    .then(resp => {
+      if(resp.ok){
+        resp.json().then(setUser)
+      } else{
+        resp.json().then(console.log)
+      }
+    })
   }, [])
-  
 
-  console.log(user)
 
   return (
     <BrowserRouter>
