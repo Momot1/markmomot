@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom"
 import "./css/nav.css"
+import logo from "./images/logo.png"
 
 function NavBar({user}){ 
 
     function logoutDropdown(){
         return (
-            <div className="m-auto dropdown">
-                <button class="btn btn-dark dropdown-toggle text-capitalize btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{user.name}</button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div className="dropdown">
+                <button class="btn btn-dark dropdown-toggle text-capitalize btn-lg me-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{width: "100%"}}>{user.name}</button>
+                <div class="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
                     <NavLink to={`/${user.username}/profile`} className="dropdown-item">My Profile</NavLink>
                     <NavLink to="/logout" className="dropdown-item">Logout</NavLink>
                 </div>
@@ -18,21 +19,24 @@ function NavBar({user}){
     function returnLinks(){
         return (
             <>
-                <NavLink exact to="/" className="btn btn-dark m-auto btn-lg">Home</NavLink>
-                <NavLink to="/about" className="btn btn-dark m-auto btn-lg">About Me</NavLink>
-                <NavLink to="/contact" className="btn btn-dark m-auto btn-lg">Contact Me</NavLink>
-                {!user ? <NavLink to="/login" className="btn btn-dark m-auto btn-lg">Login</NavLink> : logoutDropdown()}
+                <NavLink exact to="/" className="btn btn-dark btn-lg me-4">Home</NavLink>
+                <NavLink to="/about" className="btn btn-dark btn-lg me-4">About Me</NavLink>
+                <NavLink to="/contact" className="btn btn-dark btn-lg me-4">Contact Me</NavLink>
+                {!user ? <NavLink to="/login" className="btn btn-dark btn-lg me-4">Login</NavLink> : logoutDropdown()}
             </>
         )
     }
 
     return (
         <div>
-             <nav className="nav justify-content-center nav-tabs" id="desktop-nav">
+            <img src={logo} alt="Logo" id="logo"/>
+            
+             <nav className="nav test nav-tabs" id="desktop-nav">
+             
                 {returnLinks()}
             </nav>
             <nav id="mobile-nav">
-                <nav class="navbar navbar-dark bg-dark">
+                <nav class="navbar-dark bg-dark" style={{width: "min-content", position: "relative", left: "calc(100% - 80px)"}}>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

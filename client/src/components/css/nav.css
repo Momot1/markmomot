@@ -9,7 +9,19 @@ nav{
     display: none;
 }
 
-@media (max-width: 650px){
+#logo{
+    position: absolute;
+    left: 1rem;
+    height: 50px;
+    margin-top: 4px;
+}
+
+.test{
+    align-items: flex-start;
+    justify-content: end;
+}
+
+@media (max-width: 700px){
     #desktop-nav{
         display: none;
     }
