@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import "./css/nav.css"
 
-function NavBar({user}){
+function NavBar({user}){ 
 
     function logoutDropdown(){
         return (
@@ -15,13 +15,39 @@ function NavBar({user}){
         )
     }
 
+    function returnLinks(){
+        return (
+            <>
+                <NavLink exact to="/" className="btn btn-dark m-auto btn-lg">Home</NavLink>
+                <NavLink to="/about" className="btn btn-dark m-auto btn-lg">About Me</NavLink>
+                <NavLink to="/contact" className="btn btn-dark m-auto btn-lg">Contact Me</NavLink>
+                {!user ? <NavLink to="/login" className="btn btn-dark m-auto btn-lg">Login</NavLink> : logoutDropdown()}
+            </>
+        )
+    }
+
     return (
-        <nav className="nav justify-content-center nav-tabs">
-            <NavLink exact to="/" className="btn btn-dark m-auto btn-lg">Home</NavLink>
-            <NavLink to="/about" className="btn btn-dark m-auto btn-lg">About Me</NavLink>
-            <NavLink to="/contact" className="btn btn-dark m-auto btn-lg">Contact Me</NavLink>
-            {!user ? <NavLink to="/login" className="btn btn-dark m-auto btn-lg">Login</NavLink> : logoutDropdown()}
-        </nav>
+        <div>
+             <nav className="nav justify-content-center nav-tabs" id="desktop-nav">
+                {returnLinks()}
+            </nav>
+            <nav id="mobile-nav">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <div className="d-flex flex-column">
+                            {returnLinks()}
+                        </div>
+                        
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </nav>
+        </div>
+       
     )
 }
 
