@@ -1,6 +1,9 @@
 import { useState } from "react"
+import { useHistory } from "react-router-dom"
 
 function Contact(){
+    const history = useHistory()
+
     const [formData, setFormData] = useState({
         message: "",
         email: "",
@@ -29,7 +32,11 @@ function Contact(){
                 body: JSON.stringify(formData) 
             })
             .then(resp => resp.json())
-            .then(console.log)
+            .then(() => {
+                
+            })
+            history.push("/")
+            alert("Thanks for submitting! We will reach out to you soon")
         }
     }
 

@@ -29,4 +29,8 @@ nav{
     #mobile-nav{
         display: block;
     }
+
+    #logo{
+        margin-top: 14px;
+    }
 }
