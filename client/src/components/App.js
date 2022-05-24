@@ -8,21 +8,24 @@ import Contact from "./Contact";
 import Signup from "./Signup";
 import {  useState, useEffect } from "react";
 import Logout from "./Logout";
+import Profile from "./Profile";
 
 function App() {
   const [user, setUser] = useState(null)
+  const [projects, setProjects] = useState(null)
 
   useEffect(() => {
     fetch("/me")
     .then(resp => {
       if(resp.ok){
         resp.json().then(setUser)
-      } else{
-        resp.json().then(console.log)
       }
     })
-  }, [])
 
+    fetch("/projects")
+        .then(resp => resp.json())
+        .then(setProjects)
+  }, [])
 
   return (
     <BrowserRouter>
@@ -30,11 +33,12 @@ function App() {
 
       <Switch>
         <Route exact path="/"><Home /></Route>
-        <Route path="/about"><About /></Route>
+        <Route path="/about"><About user={user} projects={projects}/></Route>
         <Route path="/login"><Login user={user} setUser={setUser}/></Route>
         <Route path="/contact"><Contact /></Route>
         <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>
         <Route path="/logout"><Logout setUser={setUser}/></Route>
+        <Route path="/:username/profile"><Profile user={user}/></Route>
         <Route path="/"><h1>404 NOT FOUND</h1></Route>
       </Switch>
     </BrowserRouter>

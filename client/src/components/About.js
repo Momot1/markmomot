@@ -1,14 +1,4 @@
-import { useState, useEffect } from "react"
-
-function About(){
-
-    const [projects, setProjects] = useState(null)
-
-    useEffect(() => {
-        fetch("/projects")
-        .then(resp => resp.json())
-        .then(setProjects)
-    }, [])
+function About({projects, user}){
 
     if(!projects){
         return <>Loading</>
@@ -16,13 +6,14 @@ function About(){
 
     
 
-    const projectElements = projects.map(project => <div><h3>{project.name}</h3><a href={`${project.project_url}`}>Project Link</a><br/><a href={`${project.github_url}`}>Github Link</a></div>)
+    const projectElements = projects.map(project => <div key={project.id}><h3>{project.name}</h3><a href={`${project.project_url}`}>Project Link</a><br/><a href={`${project.github_url}`}>Github Link</a></div>)
 
     return (
         <div>
             <h1>About Me</h1>
             <h2 style={{ borderBottom: "1px solid black", width: "max-content" }}>Projects</h2>
             {projectElements}
+            {user && user.is_admin ? <button>Add Project</button> : null}
         </div>
     )
 }
