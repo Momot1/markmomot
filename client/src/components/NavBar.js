@@ -31,7 +31,7 @@ function NavBar({user}){
         <div>
             <img src={logo} alt="Logo" id="logo"/>
             
-             <nav className="nav test nav-tabs justify-content-end" id="desktop-nav">
+             <nav className="nav nav-tabs justify-content-end" id="desktop-nav">
              
                 {returnLinks()}
             </nav>
