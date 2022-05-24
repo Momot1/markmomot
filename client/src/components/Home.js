@@ -15,7 +15,7 @@ function Home(){
                <h3>My weaknesses as a developer</h3>
            </div>
            <footer>
-                <h6>Feel free to reach out to me by submitting the contact me form.</h6>
+                <h6>Feel free to reach out to me by submitting the <a href="/contact">contact me</a> form.</h6>
 
                 <a href="#top">Back to top</a>
            </footer>
