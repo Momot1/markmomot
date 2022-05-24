@@ -11,6 +11,9 @@ function Home(){
            <div className="border-bottom">
                <h3>My experiences as a developer</h3>
            </div>
+           <div className="border-bottom">
+               <h3>My weaknesses as a developer</h3>
+           </div>
            <footer>
                 <h6>Feel free to reach out to me by submitting the contact me form.</h6>
 
