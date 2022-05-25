@@ -1,0 +1,25 @@
+#signup-div{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    background-color: rgb(170, 170, 170);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#signup-div span{
+    font-size: 1.2em;
+}
+
+#signup-div input{
+    font-size: 1.2em;
+}
+
+#signup-form{
+    text-align: center;
+}
+
+#signup-form a{
+    color: black;
+    font-size: 1.4em;
+}

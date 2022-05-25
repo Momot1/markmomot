@@ -19,7 +19,6 @@ function Login({user, setUser}){
         e.preventDefault()
         const form = e.target
         if(form.checkValidity() === false){
-            // e.preventDefault()
             e.stopPropagation()
         }
 
@@ -41,7 +40,6 @@ function Login({user, setUser}){
                     resp.json().then(user => {
                         setUser(user)
                         history.goBack()
-                        
                     })
                 } else{
                     resp.json().then(setError)
