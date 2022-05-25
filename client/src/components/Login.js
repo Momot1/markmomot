@@ -2,7 +2,7 @@ import { Link, useHistory } from "react-router-dom"
 import { useState } from "react"
 import "./css/login.css"
 
-function Login({user ,setUser}){
+function Login({user, setUser}){
     const history = useHistory()
     const [error, setError] = useState(null)
 
@@ -19,13 +19,16 @@ function Login({user ,setUser}){
         e.preventDefault()
         const form = e.target
         if(form.checkValidity() === false){
-            e.preventDefault()
+            // e.preventDefault()
             e.stopPropagation()
         }
 
         form.classList.add("was-validated")
 
+        console.log("after validation")
+
         if(form.checkValidity() === true){
+            console.log("validation complete")
             fetch("/login", {
             method: "POST",
             headers: {
@@ -37,7 +40,7 @@ function Login({user ,setUser}){
                 if(resp.ok){
                     resp.json().then(user => {
                         setUser(user)
-                        window.history.go(-1)
+                        history.goBack()
                         
                     })
                 } else{
@@ -58,7 +61,6 @@ function Login({user ,setUser}){
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="Username">Username</span>
                     <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" required/><br/>
-                    {/* <div className="invalid-feedback">Please enter your username</div> */}
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="Password">Password</span>
