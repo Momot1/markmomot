@@ -44,7 +44,7 @@ function Signup({user ,setUser}){
     return (
         <div id="signup-div">
             <form onSubmit={onSignup} id="signup-form">
-                <div className="input-group mb-3">
+                <div className="input-group mb-3 d-flex">
                     <span className="input-group-text" id="Name">Name</span>
                     <input type="text" placeholder="Full Name" value={formData.name} onChange={e => updateForm(e, "name")} aria-label="Name" aria-describedby="Name" className="form-control" required/><br/>    
                 </div>
