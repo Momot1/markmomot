@@ -4,6 +4,7 @@ import "./css/login.css"
 
 function Login({user ,setUser}){
     const history = useHistory()
+    const [error, setError] = useState(null)
 
     if(user){
         history.push("/")
@@ -16,22 +17,35 @@ function Login({user ,setUser}){
 
     function onLogin(e){
         e.preventDefault()
+        const form = e.target
+        if(form.checkValidity() === false){
+            e.preventDefault()
+            e.stopPropagation()
+        }
 
-        fetch("/login", {
+        form.classList.add("was-validated")
+
+        if(form.checkValidity() === true){
+            fetch("/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(formData)
-        })
-        .then(resp => {
-            if(resp.ok){
-                resp.json().then(user => {
-                    setUser(user)
-                    window.history.go(-1)
-                })
-            }
-        })
+            })
+            .then(resp => {
+                if(resp.ok){
+                    resp.json().then(user => {
+                        setUser(user)
+                        window.history.go(-1)
+                        
+                    })
+                } else{
+                    resp.json().then(setError)
+                }
+            })
+        }
+        
     }
 
     function updateForm(e, input){
@@ -40,17 +54,14 @@ function Login({user ,setUser}){
 
     return (
         <div id="login-div">
-            <form onSubmit={onLogin} id="login-form">
+            <form onSubmit={onLogin} id="login-form" noValidate className="needs-validation">
                 <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="Username">Username:</span>
-                    </div>
-                    <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username:" aria-describedby="Username" className="form-control" required/><br/>
+                    <span className="input-group-text" id="Username">Username</span>
+                    <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" required/><br/>
+                    {/* <div className="invalid-feedback">Please enter your username</div> */}
                 </div>
                 <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="Password">Password</span>
-                    </div>
+                    <span className="input-group-text" id="Password">Password</span>
                     <input type="password" value={formData.password} onChange={e => updateForm(e, "password")} placeholder="Password" aria-label="Password" aria-describedby="Password" className="form-control" required/>
                 </div>
                 
@@ -61,6 +72,7 @@ function Login({user ,setUser}){
                 
                 
             </form>
+            {error ? <div className="alert alert-danger" id="error-message">{error.error}</div> : null}
         </div>
     )
 

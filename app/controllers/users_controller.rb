@@ -25,6 +25,6 @@ class UsersController < ApplicationController
     end
 
     def rescue_not_found
-        render json: {error: "Not authorized. Please login"}, status: :unauthorized
+        render json: {errors: "Not authorized. Please login"}, status: :unauthorized
     end
 end

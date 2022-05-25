@@ -26,6 +26,11 @@
     font-size: 1.4em;
 }
 
+#error-message{
+    text-align: center;
+    font-size: 1.4em;
+}
+
 @media screen and (max-width: 1850px){
     #login-div{
         margin-left: 20%;
@@ -49,9 +54,7 @@
 
 @media screen and (max-width: 700px){
     #login-div{
-        /* margin-left: 0%; */
         margin: 10px;
-        /* padding: 5px; */
         width: calc(100% - 20px);
     }
 }

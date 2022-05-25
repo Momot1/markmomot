@@ -7,8 +7,8 @@ function NavBar({user}){
     function logoutDropdown(){
         return (
             <div className="dropdown">
-                <button class="btn btn-dark dropdown-toggle text-capitalize btn-lg me-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{width: "100%"}}>{user.name}</button>
-                <div class="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
+                <button className="btn btn-dark dropdown-toggle text-capitalize btn-lg me-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{width: "100%"}}>{user.name}</button>
+                <div className="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
                     <NavLink to={`/${user.username}/profile`} className="dropdown-item">My Profile</NavLink>
                     <NavLink to="/logout" className="dropdown-item">Logout</NavLink>
                 </div>
@@ -36,13 +36,13 @@ function NavBar({user}){
                 {returnLinks()}
             </nav>
             <nav id="mobile-nav">
-                <nav class="navbar-dark bg-dark" style={{width: "min-content", position: "relative", left: "calc(100% - 80px)"}}>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                <nav className="navbar-dark bg-dark" style={{width: "min-content", position: "relative", left: "calc(100% - 80px)"}}>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                 </nav>
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
+                <div className="collapse" id="navbarToggleExternalContent">
+                    <div className="bg-dark p-4">
                         <div className="d-flex flex-column">
                             {returnLinks()}
                         </div>
