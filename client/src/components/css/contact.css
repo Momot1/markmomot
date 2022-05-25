@@ -1,0 +1,59 @@
+#contact-div{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    background-color: rgb(170, 170, 170);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-div span{
+    font-size: 1.2em;
+}
+
+#contact-div input{
+    font-size: 1.2em;
+}
+
+#contact-form{
+    text-align: center;
+}
+
+@media screen and (max-width: 1850px){
+    #contact-div{
+        margin-left: 20%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    #contact-div{
+        margin-left: 17.5%;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    #contact-div{
+        margin-left: 10%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #contact-div{
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 395px) {
+    #contact-form div{
+        flex-direction: column;
+    }
+
+    #contact-form div input{
+        width: 100%;
+    }
+}

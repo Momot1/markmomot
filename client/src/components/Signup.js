@@ -66,7 +66,7 @@ function Signup({user ,setUser}){
         <div>
             <div id="signup-div">
                 <form onSubmit={onSignup} id="signup-form" noValidate>
-                    <div className="input-group mb-3 d-flex">
+                    <div className="input-group mb-3">
                         <span className="input-group-text" id="Name">Name</span>
                         <input type="text" placeholder="Full Name" value={formData.name} onChange={e => updateForm(e, "name")} aria-label="Name" aria-describedby="Name" className="form-control" required/><br/>    
                     </div>
