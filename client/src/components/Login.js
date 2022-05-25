@@ -42,7 +42,10 @@ function Login({user, setUser}){
                         history.goBack()
                     })
                 } else{
-                    resp.json().then(setError)
+                    resp.json().then(error => {
+                        setError(error)
+                        setFormData({...formData, password: ""})
+                    })
                 }
             })
         }

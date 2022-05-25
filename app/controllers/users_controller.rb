@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: :create
 
     def create
-        user = User.create(user_params)
+        user = User.create(username: params[:username].downcase.gsub(/\s+/, ""), email: params[:email].downcase.gsub(/\s+/, ""), birthday: params[:birthday], name: params[:name].downcase, password: params[:password], password_confirmation: params[:password_confirmation])
         if user.valid?
             session[:user_id] = user.id
             render json: user, status: :created
@@ -19,10 +19,6 @@ class UsersController < ApplicationController
     end
 
     private
-
-    def user_params
-        params.permit(:username, :email, :birthday, :name, :password, :password_confirmation)
-    end
 
     def rescue_not_found
         render json: {errors: "Not authorized. Please login"}, status: :unauthorized
