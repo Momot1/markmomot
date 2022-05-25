@@ -54,26 +54,29 @@ function Login({user, setUser}){
     }
 
     return (
-        <div id="login-div">
-            <form onSubmit={onLogin} id="login-form" noValidate className="needs-validation">
-                <div className="input-group mb-3">
-                    <span className="input-group-text" id="Username">Username</span>
-                    <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" required/><br/>
-                </div>
-                <div className="input-group mb-3">
-                    <span className="input-group-text" id="Password">Password</span>
-                    <input type="password" value={formData.password} onChange={e => updateForm(e, "password")} placeholder="Password" aria-label="Password" aria-describedby="Password" className="form-control" required/>
-                </div>
-                
+        <div>
+            <div id="login-div">
+                <form onSubmit={onLogin} id="login-form" noValidate className="needs-validation">
+                    <div className="input-group mb-3">
+                        <span className="input-group-text" id="Username">Username</span>
+                        <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" required/><br/>
+                    </div>
+                    <div className="input-group mb-3">
+                        <span className="input-group-text" id="Password">Password</span>
+                        <input type="password" value={formData.password} onChange={e => updateForm(e, "password")} placeholder="Password" aria-label="Password" aria-describedby="Password" className="form-control" required/>
+                    </div>
+                    
 
-                <button type="submit" className="btn btn-dark btn-lg">Login</button><br/>
-                <Link to="/signup" >Don't have an account? Sign Up</Link>    
-                
-                
-                
-            </form>
+                    <button type="submit" className="btn btn-dark btn-lg">Login</button><br/>
+                    <Link to="/signup" >Don't have an account? Sign Up</Link>    
+                    
+                    
+                    
+                </form>
+            </div>    
             {error ? <div className="alert alert-danger" id="error-message">{error.error}</div> : null}
         </div>
+        
     )
 
 }
