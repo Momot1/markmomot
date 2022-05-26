@@ -36,8 +36,7 @@ function Contact(){
             .then(() => {
                 
             })
-            history.push("/")
-            alert("Thanks for submitting! We will reach out to you soon")
+            history.push("/contact/submitted=true")
         }
     }
 

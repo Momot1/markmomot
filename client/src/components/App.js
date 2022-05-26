@@ -9,6 +9,7 @@ import Signup from "./Signup";
 import {  useState, useEffect } from "react";
 import Logout from "./Logout";
 import Profile from "./Profile";
+import ContactSubmittedPage from "./ContactSubmittedPage";
 
 function App() {
   const [user, setUser] = useState(null)
@@ -35,10 +36,11 @@ function App() {
         <Route exact path="/"><Home /></Route>
         <Route path="/about"><About user={user} projects={projects}/></Route>
         <Route path="/login"><Login user={user} setUser={setUser}/></Route>
-        <Route path="/contact"><Contact /></Route>
+        <Route exact path="/contact"><Contact /></Route>
         <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>
         <Route path="/logout"><Logout setUser={setUser}/></Route>
         <Route path="/:username/profile"><Profile user={user}/></Route>
+        <Route exact path="/contact/submitted=true"><ContactSubmittedPage /></Route>
         <Route path="/"><h1>404 NOT FOUND</h1></Route>
       </Switch>
     </BrowserRouter>
