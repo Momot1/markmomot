@@ -78,7 +78,7 @@ function Signup({user ,setUser}){
 
                     <div className="input-group mb-3">
                         <span className="input-group-text" id="Email">Email</span>
-                        <input type="email" placeholder="Email" value={formData.email} onChange={e => updateForm(e, "email")} aria-label="Email" aria-describedby="Email" className="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/><br/>    
+                        <input type="email" placeholder="Email" value={formData.email} onChange={e => updateForm(e, "email")} aria-label="Email" aria-describedby="Email" className="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required/><br/>    
                     </div>
 
                     <div className="input-group mb-3">

@@ -56,7 +56,7 @@ function Contact(){
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="Email">Email</span>
-                    <input type="text" name="Email" placeholder="Email" id="validationCustom02" value={formData.email} onChange={e => updateForm(e, "email")} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-label="Email" aria-describedby="Email" className="form-control" required/><br/> 
+                    <input type="text" name="Email" placeholder="Email" id="validationCustom02" value={formData.email} onChange={e => updateForm(e, "email")} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" aria-label="Email" aria-describedby="Email" className="form-control" required/><br/> 
                     <div className="invalid-feedback">Please enter a valid email address.</div>
                 </div>
 
