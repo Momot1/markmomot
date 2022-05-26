@@ -62,7 +62,7 @@ function Login({user, setUser}){
                 <form onSubmit={onLogin} id="login-form" noValidate className="needs-validation">
                     <div className="input-group mb-3">
                         <span className="input-group-text" id="Username">Username</span>
-                        <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" required/><br/>
+                        <input type="text" value={formData.username} onChange={e => updateForm(e, "username")} placeholder="Username" aria-label="Username" aria-describedby="Username" className="form-control" autocapitalize="none" required/><br/>
                     </div>
                     <div className="input-group mb-3">
                         <span className="input-group-text" id="Password">Password</span>
