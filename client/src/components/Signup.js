@@ -88,12 +88,12 @@ function Signup({user ,setUser}){
                     
                     <div className="input-group mb-3">
                         <span className="input-group-text" id="Password">Password</span>
-                        <input type="password" placeholder="Password" value={formData.password} onChange={e => updateForm(e, "password")} aria-label="Password" aria-describedby="Password" className="form-control" required/><br/>    
+                        <input type="password" placeholder="Password" value={formData.password} onChange={e => updateForm(e, "password")} aria-label="Password" aria-describedby="Password" className="form-control" autoComplete="new-password" required/><br/>    
                     </div>
 
                     <div className="input-group mb-3">
                         <span className="input-group-text" id="Password_confirmation">Confirm Password</span>
-                        <input type="password" placeholder="Confirm Password" value={formData.password_confirmation} onChange={e => updateForm(e, "password_confirmation")} aria-label="Password_confirmation" aria-describedby="Confirm Password" className="form-control" required/><br/>    
+                        <input type="password" placeholder="Confirm Password" value={formData.password_confirmation} onChange={e => updateForm(e, "password_confirmation")} aria-label="Password_confirmation" aria-describedby="Confirm Password" autoComplete="password" className="form-control" required/><br/>    
                     </div>
 
                     <button type="submit" className="btn btn-dark btn-lg">Sign Up</button><br/>
