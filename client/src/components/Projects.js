@@ -1,7 +1,5 @@
 import { useState } from "react"
 import AddProjectForm from "./AddProjectForm"
-import "./css/forms.css"
-import "./css/projectForm.css"
 
 function Projects({projects, user, setProjects}){
     const [isClicked, setIsClicked] = useState(false)

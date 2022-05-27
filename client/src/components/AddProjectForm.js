@@ -1,4 +1,6 @@
 import { useState } from "react"
+import "./css/projectForm.css"
+
 
 function AddProjectForm({onAddProject}){
     const [formData, setFormData] = useState({
@@ -19,7 +21,8 @@ function AddProjectForm({onAddProject}){
 
     return (
         <div id="project-form-div">
-            <form onSubmit={onAddProjectSubmit} id="project-form">
+            <h3>New Project</h3>
+            <form onSubmit={onAddProjectSubmit} >
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="Project Name">Project Name</span>
                     <input type="text" value={formData.name} onChange={e => updateForm(e, "name")} placeholder="Project Name" aria-label="Project Name" aria-describedby="Project Name" className="form-control" /><br/>

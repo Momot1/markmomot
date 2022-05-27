@@ -6,6 +6,7 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #project-div span{
@@ -14,10 +15,6 @@
 
 #project-div input{
     font-size: 1.2em;
-}
-
-#project-form{
-    text-align: center;
 }
 
 #project-form a{
