@@ -34,7 +34,7 @@ function App() {
 
       <Switch>
         <Route exact path="/"><Home /></Route>
-        <Route path="/about"><About user={user} projects={projects}/></Route>
+        <Route path="/about"><About user={user} projects={projects} setProjects={setProjects}/></Route>
         <Route path="/login"><Login user={user} setUser={setUser}/></Route>
         <Route exact path="/contact"><Contact /></Route>
         <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>

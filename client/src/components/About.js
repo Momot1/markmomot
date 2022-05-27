@@ -1,13 +1,8 @@
-function About({projects, user}){
+import DeveloperExperiences from "./DeveloperExperiences"
+import DeveloperWeaknesses from "./DeveloperWeaknesses"
+import Projects from "./Projects"
 
-    if(!projects){
-        return <>Loading</>
-    }
-
-    
-
-    const projectElements = projects.map(project => <div key={project.id}><h3>{project.name}</h3><a href={`${project.project_url}`}>Project Link</a><br/><a href={`${project.github_url}`}>Github Link</a></div>)
-
+function About({projects, user, setProjects}){
     return (
         <div>
             <h1>About Me</h1>
@@ -17,15 +12,17 @@ function About({projects, user}){
             </div>
             <div className="border-bottom">
                <h3>My experiences as a developer</h3>
-               <p>{"{placeholder}"}</p>
+               <DeveloperExperiences />
             </div>
             <div className="border-bottom">
                <h3>My weaknesses as a developer</h3>
-               <p>{"{placeholder}"}</p>
+               <DeveloperWeaknesses />
             </div>
             <h2 style={{ borderBottom: "1px solid black", width: "max-content" }}>Projects</h2>
-            {projectElements}
-            {user && user.is_admin ? <button>Add Project</button> : null}
+            <div>
+                <Projects projects={projects} user={user} setProjects={setProjects}/>
+            </div>
+            
         </div>
     )
 }
