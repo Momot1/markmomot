@@ -29,12 +29,15 @@ function NavBar({user}){
 
     return (
         <div>
+            <a className="close-navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></a>
+
             <img src={logo} alt="Logo" id="logo"/>
             
              <nav className="nav nav-tabs justify-content-end" id="desktop-nav">
              
                 {returnLinks()}
             </nav>
+
             <nav id="mobile-nav">
                 <nav className="navbar-dark bg-dark" style={{width: "min-content", position: "relative", left: "calc(100% - 80px)"}}>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
