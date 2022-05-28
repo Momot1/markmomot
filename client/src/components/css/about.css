@@ -30,3 +30,30 @@
     width: 40%;
     margin-left: 30%;
 }
+
+@media screen and (max-width: 1650px){
+    .dev-item-div{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .dev-item-div{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .dev-item-div{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .dev-item-div{
+        width: 100%;
+    }
+}
