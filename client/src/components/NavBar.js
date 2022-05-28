@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import "./css/nav.css"
 import logo from "./images/logo.png"
 
@@ -9,8 +9,8 @@ function NavBar({user}){
             <div className="dropdown">
                 <button className="btn btn-dark dropdown-toggle text-capitalize btn-lg me-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{width: "100%"}}>{user.name}</button>
                 <div className="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
-                    <NavLink to={`/${user.username}/profile`} className="dropdown-item">My Profile</NavLink>
-                    <NavLink to="/logout" className="dropdown-item">Logout</NavLink>
+                    <Link to={`/${user.username}/profile`} className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">My Profile</Link>
+                    <Link to="/logout" className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">Logout</Link>
                 </div>
             </div>
         )
@@ -19,10 +19,10 @@ function NavBar({user}){
     function returnLinks(){
         return (
             <>
-                <NavLink exact to="/" className="btn btn-dark btn-lg me-4">Home</NavLink>
-                <NavLink to="/about" className="btn btn-dark btn-lg me-4">About Me</NavLink>
-                <NavLink to="/contact" className="btn btn-dark btn-lg me-4">Contact Me</NavLink>
-                {!user ? <NavLink to="/login" className="btn btn-dark btn-lg me-4">Login</NavLink> : logoutDropdown()}
+                <NavLink exact to="/" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">Home</NavLink>
+                <NavLink to="/about" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">About Me</NavLink>
+                <NavLink to="/contact" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">Contact Me</NavLink>
+                {!user ? <NavLink to="/login" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">Login</NavLink> : logoutDropdown()}
             </>
         )
     }
