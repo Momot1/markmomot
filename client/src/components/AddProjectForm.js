@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./css/projectForm.css"
 
 
-function AddProjectForm({onAddProject}){
+function AddProjectForm({onAddProject, setIsClicked}){
     const [formData, setFormData] = useState({
         name: "",
         github_url: "",
@@ -43,7 +43,8 @@ function AddProjectForm({onAddProject}){
                     <input type="text" value={formData.description} onChange={e => updateForm(e, "description")} placeholder="Description" aria-label="Description" aria-describedby="Description" className="form-control" /><br/>
                 </div>
 
-                <button type="submit" className="btn btn-dark btn-lg">Add Project</button>
+                <button type="submit" className="btn btn-dark btn-lg">Add Project</button><br/>
+                <button type="button" className="btn btn-dark btn-lg" onClick={() => setIsClicked(false)}>Cancel</button>
             </form>    
         </div>
         

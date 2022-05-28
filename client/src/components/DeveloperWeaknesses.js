@@ -1,6 +1,6 @@
 function DeveloperWeaknesses(){
     return (
-        <div>
+        <div className="dev-item-div">
             <h5>Front End Weaknesses</h5>
             <ul>
                 <li>
@@ -10,7 +10,7 @@ function DeveloperWeaknesses(){
             <h5>Back End Weaknesses</h5>
             <ul>
                 <li>
-                    
+
                 </li>
             </ul>
         </div>

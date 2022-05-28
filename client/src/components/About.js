@@ -1,25 +1,27 @@
 import DeveloperExperiences from "./DeveloperExperiences"
 import DeveloperWeaknesses from "./DeveloperWeaknesses"
 import Projects from "./Projects"
+import "./css/about.css"
 
 function About({projects, user, setProjects}){
     return (
-        <div>
-            <h1>About Me</h1>
+        <div id="about-div">
+            <h1 id="about-title">About Me</h1>
             <div className="border-bottom">
-               <h3>Who am I?</h3>
+               <h2 className="about-h2">Who am I?</h2>
                <p>{"{placeholder}"}</p>
             </div>
             <div className="border-bottom">
-               <h3>My experiences as a developer</h3>
+               <h2 className="about-h2">My experiences as a developer</h2>
                <DeveloperExperiences />
             </div>
             <div className="border-bottom">
-               <h3>My weaknesses as a developer</h3>
+               <h2 className="about-h2">My weaknesses as a developer</h2>
                <DeveloperWeaknesses />
             </div>
-            <h2 style={{ borderBottom: "1px solid black", width: "max-content" }}>Projects</h2>
-            <div>
+            
+            <div className="text-center">
+                <h2 className="border-bottom about-h2">Projects</h2>
                 <Projects projects={projects} user={user} setProjects={setProjects}/>
             </div>
             

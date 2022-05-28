@@ -1,6 +1,6 @@
 function DeveloperExperiences(){
     return (
-        <div>
+        <div className="dev-item-div">
             <h5>Front End Development</h5>
             <ul>
                 <li>
