@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   
-  resources :projects, only: [:index, :create]
+  resources :projects, only: [:index, :create, :destroy]
   post "/sendmessage", to: "contact_form#create"
 end

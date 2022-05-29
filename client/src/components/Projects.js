@@ -8,7 +8,18 @@ function Projects({projects, user, setProjects}){
         return <></>
     }
 
-    const projectElements = projects.map(project => <div key={project.id}><h3>{project.name}</h3><a href={`${project.project_url}`}>Project Link</a><br/><a href={`${project.github_url}`}>Github Link</a></div>)
+    function onDeleteProject(id){
+        fetch(`/projects/${id}`, {
+            method: "DELETE"
+        })
+        .then(resp => resp.json())
+        .then(() => {
+            const updatedProjects = projects.filter(project => project.id !== id)
+            setProjects(updatedProjects)
+        })
+    }
+
+    const projectElements = projects.map(project => <div key={project.id}><h3>{project.name} {user && user.is_admin ? <button className="btn btn-dark" onClick={() => onDeleteProject(project.id)}>Delete</button> : null}</h3><a href={`${project.project_url}`}>Project Link</a><br/><a href={`${project.github_url}`}>Github Link</a></div>)
 
     function onAddProject(formData){
         fetch("/projects", {

@@ -14,6 +14,17 @@ class ProjectsController < ApplicationController
         end
     end
 
+    def destroy
+        user = User.find(session[:user_id])
+        if user.is_admin
+            project = Project.find(params[:id])
+            project.destroy
+            render json: {}
+        else
+            render json: {error: "You have to be an administrator to delete a project."}, status: :unauthorized
+        end
+    end
+
     private
 
     def project_params
