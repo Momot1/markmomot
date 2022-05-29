@@ -9,6 +9,7 @@ function NavBar({user}){
             <div className="dropdown">
                 <button className="btn btn-dark dropdown-toggle text-capitalize btn-lg me-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{width: "100%"}}>{user.name}</button>
                 <div className="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
+                    <a href={`/${user.username}/profile`} className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">My Profile</a>
                     <Link to={`/${user.username}/profile`} className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">My Profile</Link>
                     <Link to="/logout" className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">Logout</Link>
                 </div>
@@ -46,7 +47,7 @@ function NavBar({user}){
                 </nav>
                 <div className="collapse" id="navbarToggleExternalContent">
                     <div className="bg-dark p-4">
-                        <div className="d-flex flex-column">
+                        <div className="d-flex flex-column navbar">
                             {returnLinks()}
                         </div>
                         
