@@ -55,5 +55,6 @@
 @media screen and (max-width: 750px){
     .dev-item-div{
         width: 100%;
+        margin-left: 0;
     }
 }
