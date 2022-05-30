@@ -2,7 +2,6 @@
     width: 50%;
     margin-left: 25%;
     margin-top: 20px;
-    background-color: rgb(233, 233, 233);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -15,6 +14,14 @@
 
 #project-form-div input{
     font-size: 1.2em;
+}
+
+#dark #project-form-div{
+    background-color: rgb(124, 124, 124);
+}
+
+#light #project-form-div{
+    background-color: rgb(233, 233, 233);
 }
 
 @media screen and (max-width: 1850px){
