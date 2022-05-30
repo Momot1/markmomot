@@ -37,7 +37,7 @@ function Projects({projects, user, setProjects}){
     }
 
     return (
-        <div>
+        <div id="project-div">
             {projectElements}
             {user && user.is_admin && !isClicked ? <button className="btn btn-dark btn-lg" onClick={() => setIsClicked(!isClicked)}>Add Project</button> : null}
             {!(user && user.is_admin && isClicked) ? null : <AddProjectForm onAddProject={onAddProject} setIsClicked={setIsClicked}/>}

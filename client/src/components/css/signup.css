@@ -17,6 +17,7 @@
 
 #signup-div span{
     font-size: 1.2em;
+    width: 9em;
 }
 
 #signup-div input{
@@ -103,6 +104,10 @@
 
     #signup-form div{
         flex-direction: column;
+    }
+
+    #signup-div span{
+        width: 100%;
     }
 
     #signup-form div input{

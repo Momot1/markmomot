@@ -9,6 +9,7 @@
 
 #contact-div span{
     font-size: 1.2em;
+    width: 8em;
 }
 
 #contact-div input{
@@ -48,19 +49,25 @@
     }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 830px){
     #contact-div{
         margin: 10px;
         width: calc(100% - 20px);
     }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 600px) {
+    
+
     #contact-form div{
         flex-direction: column;
     }
 
     #contact-form div input{
+        width: 100%;
+    }
+
+    #contact-div span{
         width: 100%;
     }
 }

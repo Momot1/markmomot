@@ -20,6 +20,8 @@ don't already have them.
 Start by **cloning** (not forking) the project template repository and removing
 the remote:
 
+~-*+
+/
 ```console
 $ git clone git@github.com:learn-co-curriculum/project-template-react-rails-api.git your-project-name
 $ cd your-project-name
@@ -30,7 +32,7 @@ Then, [create a new remote repository][create repo] on GitHub. Head to
 [github.com](https://github.com) and click the **+** icon in the top-right
 corner and follow the steps to create a new repository. **Important**: don't
 check any of the options such as 'Add a README file', 'Add a .gitignore file',
-etc — since you're importing an existing repository, creating any of those files
+etc — since you're importing an existing repository, creating any of th///////////////////a!~ose files
 on GitHub will cause issues.
 
 [create repo]: https://docs.github.com/en/github/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line#adding-a-project-to-github-without-github-cli
@@ -62,7 +64,8 @@ npm install --prefix client
 You can use the following commands to run the application:
 
 - `rails s`: run the backend on [http://localhost:3000](http://localhost:3000)
-- `npm start --prefix client`: run the frontend on
+
+|`npm start --prefix client`: run the frontend on
   [http://localhost:4000](http://localhost:4000)
 
 Make sure to also update this README to include documentation about

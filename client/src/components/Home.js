@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Home(){
     return (
         <div className="justify-content-center text-center">
@@ -7,7 +9,7 @@ function Home(){
                <p>{"{placeholder}"}</p>
            </div>
            <footer>
-                <h6>Feel free to reach out to me by submitting the <a href="/contact">contact me</a> form.</h6>
+                <h6>Feel free to reach out to me by submitting the <Link to="/contact">contact me</Link> form.</h6>
 
                 <a href="#top">Back to top</a>
            </footer>

@@ -10,6 +10,7 @@
 
 #project-form-div span{
     font-size: 1.2em;
+    width: 7.1em;
 }
 
 #project-form-div input{
@@ -46,6 +47,18 @@
 }
 
 @media screen and (max-width: 700px){
+    #project-div div{
+        flex-direction: column;
+    }
+
+    #project-div div input{
+        width: 100%;
+    }
+
+    #project-div span{
+        width: 100%;
+    }
+
     #project-form-div{
         margin: 10px;
         width: calc(100% - 20px);
