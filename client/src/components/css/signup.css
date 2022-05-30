@@ -3,9 +3,16 @@
     margin-left: 25%;
     margin-top: 20px;
     margin-bottom: 10px;
-    background-color: rgb(233, 233, 233);
     padding: 10px;
     border-radius: 10px;
+}
+
+#dark #signup-div{
+    background-color: rgb(124, 124, 124);
+}
+
+#light #signup-div{
+    background-color: rgb(233, 233, 233);
 }
 
 #signup-div span{

@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom"
 import "./css/nav.css"
 import logo from "./images/logo.png"
 
-function NavBar({user}){ 
+function NavBar({user, onChangeTheme}){ 
 
     function logoutDropdown(){
         return (
@@ -29,6 +29,10 @@ function NavBar({user}){
 
     return (
         <div>
+            <div class="form-check form-switch" id="toggle-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={onChangeTheme}/>
+            </div>
+
             <a className="close-navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></a>
 
             <img src={logo} alt="Logo" id="logo"/>

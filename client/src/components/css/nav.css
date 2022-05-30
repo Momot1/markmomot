@@ -1,9 +1,27 @@
-nav{
+#light nav{
     background-color: rgb(233, 233, 233);
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
 } 
+
+#dark nav{
+    background-color: rgb(124, 124, 124);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+} 
+
+#toggle-switch{
+    position: absolute;
+    left: 100px;
+    top: 18px;
+}
+
+#toggle-switch input{
+    height: 30px;
+    width: 50px;
+}
 
 #mobile-nav{
     display: none;
@@ -16,9 +34,15 @@ nav{
     margin-top: 4px;
 }
 
-@media (max-width: 700px){
+@media (max-width: 830px){
     #desktop-nav{
         display: none;
+    }
+
+    #toggle-switch{
+        position: absolute;
+        left: 100px;
+        top: 30px;
     }
 
     #mobile-nav{
@@ -41,7 +65,7 @@ nav{
         width:100%;
         z-index:1;
     }
-    
+
       .close-navbar-toggler.collapsed{
         z-index:-1;
       }

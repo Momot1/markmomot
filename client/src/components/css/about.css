@@ -1,7 +1,6 @@
 .about-h2{
     font-size: 2.5em;
     padding: 10px;
-    background-color: rgb(233, 233, 233);
     text-align: center;
 }
 
@@ -9,8 +8,23 @@
     font-size: 3em;
     padding: 10px;
     margin: 10px 0 0 0;
-    background-color: rgb(233, 233, 233);
     text-align: center;
+}
+
+#dark #about-title{
+    background-color: rgb(124, 124, 124);
+}
+
+#light #about-title{
+    background-color: rgb(233, 233, 233);
+}
+
+#dark .about-h2{
+    background-color: rgb(124, 124, 124);
+}
+
+#light .about-h2{
+    background-color: rgb(233, 233, 233);
 }
 
 #about-div p {

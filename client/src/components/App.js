@@ -10,10 +10,12 @@ import {  useState, useEffect } from "react";
 import Logout from "./Logout";
 import Profile from "./Profile";
 import ContactSubmittedPage from "./ContactSubmittedPage";
+import "./css/app.css"
 
 function App() {
   const [user, setUser] = useState(null)
   const [projects, setProjects] = useState(null)
+  const [theme, setTheme] = useState("light")
 
   useEffect(() => {
     fetch("/me")
@@ -28,22 +30,29 @@ function App() {
         .then(setProjects)
   }, [])
 
-  return (
-    <BrowserRouter>
-      <NavBar user={user}/>
+  function onChangeTheme(){
+    setTheme(theme => theme === "light" ? "dark" : "light")
+  }
 
-      <Switch>
-        <Route exact path="/"><Home /></Route>
-        <Route path="/about"><About user={user} projects={projects} setProjects={setProjects}/></Route>
-        <Route path="/login"><Login user={user} setUser={setUser}/></Route>
-        <Route exact path="/contact"><Contact /></Route>
-        <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>
-        <Route path="/logout"><Logout setUser={setUser}/></Route>
-        <Route path="/:username/profile"><Profile user={user}/></Route>
-        <Route exact path="/contact/submitted=true"><ContactSubmittedPage /></Route>
-        <Route path="/"><h1>404 NOT FOUND</h1></Route>
-      </Switch>
-    </BrowserRouter>
+  return (
+    <div id={theme} className="app">
+      <BrowserRouter>
+        <NavBar user={user} onChangeTheme={onChangeTheme}/>
+
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route path="/about"><About user={user} projects={projects} setProjects={setProjects}/></Route>
+          <Route path="/login"><Login user={user} setUser={setUser}/></Route>
+          <Route exact path="/contact"><Contact /></Route>
+          <Route path="/signup"><Signup user={user} setUser={setUser}/></Route>
+          <Route path="/logout"><Logout setUser={setUser}/></Route>
+          <Route path="/:username/profile"><Profile user={user}/></Route>
+          <Route exact path="/contact/submitted=true"><ContactSubmittedPage /></Route>
+          <Route path="/"><h1>404 NOT FOUND</h1></Route>
+        </Switch>
+      </BrowserRouter>  
+    </div>
+    
   );
 }
 
