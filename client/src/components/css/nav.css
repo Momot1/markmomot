@@ -2,14 +2,14 @@
     background-color: rgb(233, 233, 233);
     margin: 10px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 } 
 
 #dark nav{
     background-color: rgb(124, 124, 124);
     margin: 10px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 } 
 
 #toggle-switch{

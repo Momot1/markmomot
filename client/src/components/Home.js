@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
+import "./css/home.css"
 
 function Home(){
     return (
         <div className="justify-content-center text-center">
-           <h1 className="border-bottom">Welcome to my webpage</h1>
+           <h1 id="home-title">Welcome to my webpage</h1>
            <div className="border-bottom">
-               <h3>What is this site about?</h3>
+               <h3 id="home-h3">What is this site about?</h3>
                <p>{"{placeholder}"}</p>
            </div>
            <footer>
