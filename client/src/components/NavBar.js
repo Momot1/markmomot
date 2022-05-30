@@ -29,8 +29,8 @@ function NavBar({user, onChangeTheme}){
 
     return (
         <div>
-            <div class="form-check form-switch" id="toggle-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={onChangeTheme}/>
+            <div className="form-check form-switch" id="toggle-switch">
+                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={onChangeTheme}/>
             </div>
 
             <a className="close-navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></a>

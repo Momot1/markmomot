@@ -8,13 +8,12 @@ function Logout({setUser}){
     })
     .then(resp => resp.json())
     .then(() => {
-        setUser(null)
         history.push("/")
+        setUser(null)
     })
 
-
     return (
-        <div></div>
+        <></>
     )
 }
 

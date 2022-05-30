@@ -24,10 +24,7 @@ function Login({user, setUser}){
 
         form.classList.add("was-validated")
 
-        console.log("after validation")
-
         if(form.checkValidity() === true){
-            console.log("validation complete")
             fetch("/login", {
             method: "POST",
             headers: {
