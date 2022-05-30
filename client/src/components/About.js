@@ -8,7 +8,7 @@ function About({projects, user, setProjects}){
         <div id="about-div">
             <h1 id="about-title">About Me</h1>
             <div className="border-bottom">
-               <h2 className="about-h2">Who am I?</h2>
+               <h2 className="about-h2" id="who-am-i-h2">Who am I?</h2>
                <p>{"{placeholder}"}</p>
             </div>
             <div className="border-bottom">
