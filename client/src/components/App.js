@@ -17,10 +17,10 @@ function App() {
   const [user, setUser] = useState(null);
   const [projects, setProjects] = useState(null);
   const [theme, setTheme] = useState(
-    window.matchMedia("(preferts-color-scheme: dark)").matches
-      ? "dark"
-      : "light"
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
   );
+
+  // console.log(window.matchMedia)
 
   useEffect(() => {
     fetch("/me").then((resp) => {
