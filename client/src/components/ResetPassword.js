@@ -13,6 +13,15 @@ export default function ResetPassword() {
       e.stopPropagation();
       console.log(email);
     } else {
+      fetch("/passwordreset", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email }),
+      })
+        .then((resp) => resp.json())
+        .then(console.log);
     }
 
     form.classList.add("was-validated");
@@ -34,7 +43,7 @@ export default function ResetPassword() {
             aria-describedby="Email"
             className="form-control"
             autoCapitalize="none"
-            disabled
+            // disabled
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
             required
           />

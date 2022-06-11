@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   
   resources :projects, only: [:index, :create, :destroy]
   post "/sendmessage", to: "contact_form#create"
+  
+  post "/passwordreset", to: "users#reset_password"
 end

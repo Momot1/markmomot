@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :rescue_not_found
-    skip_before_action :authorized, only: :create
+    skip_before_action :authorized, only: [:create, :reset_password]
 
     def create
         user = User.create(username: params[:username].downcase.gsub(/\s+/, ""), email: params[:email].downcase.gsub(/\s+/, ""), birthday: params[:birthday], name: params[:name].downcase, password: params[:password], password_confirmation: params[:password_confirmation])
@@ -16,6 +16,15 @@ class UsersController < ApplicationController
         user = User.find(session[:user_id])
 
         render json: user, status: :created
+    end
+
+    def reset_password
+        # user = User.find_by(email: params[:email])
+        c = PasswordReset.new(email: params[:email])
+        c.deliver
+
+        render json: c
+
     end
 
     private
