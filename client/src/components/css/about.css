@@ -6,6 +6,12 @@
     margin: 10px;
 }
 
+#my-pic{
+    width: 20%;
+    margin-left: 40%;
+    padding: 10px;
+}
+
 #about-title{
     font-size: 3em;
     padding: 10px;
@@ -64,6 +70,11 @@
         width: 50%;
         margin-left: 25%;
     }
+
+    #my-pic{
+        width: 30%;
+        margin-left: 35%;
+    }
 }
 
 @media screen and (max-width: 1200px){
@@ -71,6 +82,11 @@
         width: 60%;
         margin-left: 20%;
     }
+
+        #my-pic {
+            width: 40%;
+            margin-left: 30%;
+        }
 }
 
 @media screen and (max-width: 1000px){
@@ -78,6 +94,11 @@
         width: 80%;
         margin-left: 10%;
     }
+
+        #my-pic {
+            width: 50%;
+            margin-left: 25%;
+        }
 }
 
 @media screen and (max-width: 750px){
@@ -85,4 +106,9 @@
         width: 100%;
         margin-left: 0;
     }
+
+        #my-pic {
+            width: 60%;
+            margin-left: 20%;
+        }
 }

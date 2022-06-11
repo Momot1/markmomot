@@ -1,32 +1,35 @@
-import DeveloperExperiences from "./DeveloperExperiences"
-import DeveloperWeaknesses from "./DeveloperWeaknesses"
-import Projects from "./Projects"
-import "./css/about.css"
+import DeveloperExperiences from "./DeveloperExperiences";
+import DeveloperWeaknesses from "./DeveloperWeaknesses";
+import Projects from "./Projects";
+import "./css/about.css";
+import myPic from "./images/myPic.jpg";
 
-function About({projects, user, setProjects}){
-    return (
-        <div id="about-div">
-            <h1 id="about-title">About Me</h1>
-            <div>
-               <h2 className="about-h2" id="who-am-i-h2">Who am I?</h2>
-               <p>{"{placeholder}"}</p>
-            </div>
-            <div>
-               <h2 className="about-h2">My experiences as a developer</h2>
-               <DeveloperExperiences />
-            </div>
-            <div>
-               <h2 className="about-h2">My weaknesses as a developer</h2>
-               <DeveloperWeaknesses />
-            </div>
-            
-            <div className="text-center">
-                <h2 className="about-h2">Projects</h2>
-                <Projects projects={projects} user={user} setProjects={setProjects}/>
-            </div>
-            
-        </div>
-    )
+function About({ projects, user, setProjects }) {
+  return (
+    <div id="about-div">
+      <h1 id="about-title">About Me</h1>
+      <img src={myPic} id="my-pic" alt="This is me" />
+      <div>
+        <h2 className="about-h2" id="who-am-i-h2">
+          Who am I?
+        </h2>
+        <p>{"{placeholder}"}</p>
+      </div>
+      <div>
+        <h2 className="about-h2">My experiences as a developer</h2>
+        <DeveloperExperiences />
+      </div>
+      <div>
+        <h2 className="about-h2">My weaknesses as a developer</h2>
+        <DeveloperWeaknesses />
+      </div>
+
+      <div className="text-center">
+        <h2 className="about-h2">Projects</h2>
+        <Projects projects={projects} user={user} setProjects={setProjects} />
+      </div>
+    </div>
+  );
 }
 
-export default About
+export default About;
