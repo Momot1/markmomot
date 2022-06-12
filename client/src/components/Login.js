@@ -68,7 +68,7 @@ function Login({ user, setUser }) {
               type="text"
               value={formData.username}
               onChange={(e) => updateForm(e, "username")}
-              placeholder="Username"
+              placeholder="Username/Email"
               aria-label="Username"
               aria-describedby="Username"
               className="form-control"
