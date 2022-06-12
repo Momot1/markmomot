@@ -3,6 +3,7 @@ import DeveloperWeaknesses from "./DeveloperWeaknesses";
 import Projects from "./Projects";
 import "./css/about.css";
 import myPic from "./images/myPic.jpg";
+import MainFooter from "./MainFooter";
 
 function About({ projects, user, setProjects }) {
   return (
@@ -16,7 +17,18 @@ function About({ projects, user, setProjects }) {
         <div className="dev-item-div">
           <p>
             My name is Mark Momot. I am 21 years old, and am currently enrolled
-            in Flatiron's Software Engineering bootcamp.
+            in Flatiron's Software Engineering bootcamp. Over the past 6 months,
+            I have been learning how to build websites from the ground up. Some
+            of my hobbies include:
+          </p>
+          <ul>
+            <li>Football</li>
+            <li>Gaming</li>
+            <li>Building websites</li>
+          </ul>
+          <p>
+            I currently work in construction. We normally do residential
+            remodels.
           </p>
         </div>
       </div>
@@ -33,6 +45,7 @@ function About({ projects, user, setProjects }) {
         <h2 className="about-h2">Projects</h2>
         <Projects projects={projects} user={user} setProjects={setProjects} />
       </div>
+      <MainFooter />
     </div>
   );
 }

@@ -20,8 +20,6 @@ function App() {
     window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
   );
 
-  // console.log(window.matchMedia)
-
   useEffect(() => {
     fetch("/me").then((resp) => {
       if (resp.ok) {
