@@ -13,7 +13,12 @@ function About({ projects, user, setProjects }) {
         <h2 className="about-h2" id="who-am-i-h2">
           Who am I?
         </h2>
-        <p>{"{placeholder}"}</p>
+        <div className="dev-item-div">
+          <p>
+            My name is Mark Momot. I am 21 years old, and am currently enrolled
+            in Flatiron's Software Engineering bootcamp.
+          </p>
+        </div>
       </div>
       <div>
         <h2 className="about-h2">My experiences as a developer</h2>

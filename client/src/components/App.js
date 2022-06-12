@@ -41,7 +41,7 @@ function App() {
   return (
     <div id={theme} className="app">
       <BrowserRouter>
-        <NavBar user={user} onChangeTheme={onChangeTheme} />
+        <NavBar user={user} onChangeTheme={onChangeTheme} theme={theme} />
 
         <Switch>
           <Route exact path="/">
