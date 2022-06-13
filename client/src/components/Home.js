@@ -10,7 +10,7 @@ function Home() {
         <h3 id="home-h3">What is this site about?</h3>
         <p>{"{placeholder}"}</p>
       </div>
-      <MainFooter />
+      {window.innerHeight < 208 ? <MainFooter /> : null}
     </div>
   );
 }
