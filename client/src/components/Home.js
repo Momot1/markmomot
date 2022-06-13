@@ -4,10 +4,14 @@ import MainFooter from "./MainFooter";
 
 function Home() {
   return (
-    <div className="justify-content-center text-center">
-      <h1 id="home-title">Welcome to my webpage</h1>
-      <div className="border-bottom">
-        <h3 id="home-h3">What is this site about?</h3>
+    <div>
+      <h1 id="home-title" className="text-center">
+        Welcome to my webpage
+      </h1>
+      <h3 id="home-h3" className="text-center">
+        What is this site about?
+      </h3>
+      <div className="border-bottom" id="home-info-div">
         <p>
           This website is meant to demonstrate my abilities as a software
           developer. You can read all about me by going to the{" "}
