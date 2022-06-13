@@ -54,12 +54,7 @@ function Login({ user, setUser }) {
   return (
     <div>
       <div id="login-div">
-        <form
-          onSubmit={onLogin}
-          id="login-form"
-          noValidate
-          className="needs-validation"
-        >
+        <form onSubmit={onLogin} id="login-form" noValidate className="needs-validation">
           <div className="input-group mb-3">
             <span className="input-group-text" id="Username">
               Username

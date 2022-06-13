@@ -17,24 +17,11 @@ function NavBar({ user, onChangeTheme, theme }) {
         >
           {user.name}
         </button>
-        <div
-          className="dropdown-menu w-100 text-center"
-          aria-labelledby="dropdownMenuButton"
-        >
-          <Link
-            to={`/${user.username}/profile`}
-            className="dropdown-item"
-            data-toggle="collapse"
-            data-target="#navbarToggleExternalContent"
-          >
+        <div className="dropdown-menu w-100 text-center" aria-labelledby="dropdownMenuButton">
+          <Link to={`/${user.username}/profile`} className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             My Profile
           </Link>
-          <Link
-            to="/logout"
-            className="dropdown-item"
-            data-toggle="collapse"
-            data-target="#navbarToggleExternalContent"
-          >
+          <Link to="/logout" className="dropdown-item" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             Logout
           </Link>
         </div>
@@ -45,38 +32,17 @@ function NavBar({ user, onChangeTheme, theme }) {
   function returnLinks() {
     return (
       <>
-        <NavLink
-          exact
-          to="/"
-          className="btn btn-dark btn-lg me-4"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-        >
+        <NavLink exact to="/" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">
           Home
         </NavLink>
-        <NavLink
-          to="/about"
-          className="btn btn-dark btn-lg me-4"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-        >
+        <NavLink to="/about" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">
           About Me
         </NavLink>
-        <NavLink
-          to="/contact"
-          className="btn btn-dark btn-lg me-4"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-        >
+        <NavLink to="/contact" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">
           Contact Me
         </NavLink>
         {!user ? (
-          <NavLink
-            to="/login"
-            className="btn btn-dark btn-lg me-4"
-            data-toggle="collapse"
-            data-target="#navbarToggleExternalContent"
-          >
+          <NavLink to="/login" className="btn btn-dark btn-lg me-4" data-toggle="collapse" data-target="#navbarToggleExternalContent">
             Login
           </NavLink>
         ) : (

@@ -1,22 +1,18 @@
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
-function Logout({setUser}){
-    const history = useHistory()
+function Logout({ setUser }) {
+  const history = useHistory();
 
-    fetch('/logout', {
-    method: "DELETE"
-    })
-    .then(resp => resp.json())
+  fetch("/logout", {
+    method: "DELETE",
+  })
+    .then((resp) => resp.json())
     .then(() => {
-        history.push("/")
-        setUser(null)
-    })
+      history.push("/");
+      setUser(null);
+    });
 
-    return (
-        <></>
-    )
+  return <></>;
 }
 
-export default Logout
-
-
+export default Logout;

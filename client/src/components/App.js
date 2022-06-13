@@ -16,9 +16,7 @@ import ResetPassword from "./ResetPassword";
 function App() {
   const [user, setUser] = useState(null);
   const [projects, setProjects] = useState(null);
-  const [theme, setTheme] = useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  );
+  const [theme, setTheme] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
   useEffect(() => {
     fetch("/me").then((resp) => {

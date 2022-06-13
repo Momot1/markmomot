@@ -156,11 +156,7 @@ function Signup({ user, setUser }) {
               autoComplete="new-password"
               required
             />
-            <button
-              type="button"
-              className="btn btn-dark"
-              onClick={() => setPasswordViewToggled(!passwordViewToggled)}
-            >
+            <button type="button" className="btn btn-dark" onClick={() => setPasswordViewToggled(!passwordViewToggled)}>
               {passwordViewToggled ? "Hide Password" : "Show Password"}
             </button>
             <br />
@@ -181,11 +177,7 @@ function Signup({ user, setUser }) {
               className="form-control"
               required
             />
-            <button
-              type="button"
-              className="btn btn-dark"
-              onClick={() => setPasswordViewToggled(!passwordViewToggled)}
-            >
+            <button type="button" className="btn btn-dark" onClick={() => setPasswordViewToggled(!passwordViewToggled)}>
               {passwordViewToggled ? "Hide Password" : "Show Password"}
             </button>
             <br />

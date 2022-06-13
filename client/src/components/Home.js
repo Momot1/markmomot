@@ -13,17 +13,13 @@ function Home() {
       </h3>
       <div className="border-bottom" id="home-info-div">
         <p>
-          This website is meant to demonstrate my abilities as a software
-          developer. You can read all about me by going to the{" "}
-          <Link to="/about">about me</Link> page. But to give a quick summary
-          about myself, over the past 40 weeks or so, I have been learning how
-          to develop full stack web applications.
+          This website is meant to demonstrate my abilities as a software developer. You can read all about me by going to the{" "}
+          <Link to="/about">about me</Link> page. But to give a quick summary about myself, over the past 40 weeks or so, I have been learning how to
+          develop full stack web applications.
         </p>
         <h4>
-          DISCLAIMER: This website is still under development. I am currently in
-          school, so I spend my Sunday's working on my personal website, and
-          Monday-Saturday working through school. As a result, there might be
-          some bugs and some incompleted features and pages.
+          DISCLAIMER: This website is still under development. I am currently in school, so I spend my Sunday's working on my personal website, and
+          Monday-Saturday working through school. As a result, there might be some bugs and some incompleted features and pages.
         </h4>
       </div>
       {window.innerHeight < 208 ? <MainFooter /> : null}

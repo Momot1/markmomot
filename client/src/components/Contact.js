@@ -44,12 +44,7 @@ function Contact() {
 
   return (
     <div id="contact-div">
-      <form
-        onSubmit={onFormSubmit}
-        noValidate
-        className="needs-validation"
-        id="contact-form"
-      >
+      <form onSubmit={onFormSubmit} noValidate className="needs-validation" id="contact-form">
         <div className="input-group mb-3">
           <span className="input-group-text" id="Name">
             Name
@@ -88,9 +83,7 @@ function Contact() {
             required
           />
           <br />
-          <div className="invalid-feedback">
-            Please enter a valid email address.
-          </div>
+          <div className="invalid-feedback">Please enter a valid email address.</div>
         </div>
 
         <div className="input-group mb-3">

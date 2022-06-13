@@ -48,9 +48,7 @@ export default function ResetPassword() {
             required
           />
           <br />
-          <div className="invalid-feedback">
-            Please enter a valid email address
-          </div>
+          <div className="invalid-feedback">Please enter a valid email address</div>
         </div>
         <button type="submit" className="btn btn-lg btn-dark">
           Reset
