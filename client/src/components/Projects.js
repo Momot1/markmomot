@@ -31,9 +31,13 @@ function Projects({ projects, user, setProjects }) {
           </button>
         ) : null}
       </h3>
-      <a href={`${project.project_url}`}>Project Link</a>
+      <a href={`${project.project_url}`} target="_blank">
+        Project Link
+      </a>
       <br />
-      <a href={`${project.github_url}`}>Github Link</a>
+      <a href={`${project.github_url}`} target="_blank">
+        Github Link
+      </a>
       <p>{project.description}</p>
     </div>
   ));

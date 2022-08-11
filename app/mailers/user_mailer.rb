@@ -11,3 +11,4 @@ class UserMailer < ApplicationMailer
     mail to: params[:user].email, subject: "Password reset"
   end
 end
+ 
